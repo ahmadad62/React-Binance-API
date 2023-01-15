@@ -1,0 +1,14 @@
+.percent {
+    background-color: #1c6e73;
+    color: white;
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+}
+
+.green {
+    background-color: rgb(32, 123, 32);
+}
+
+.red {
+    background-color: rgb(219, 76, 76);
+}

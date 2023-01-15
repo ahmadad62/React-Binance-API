@@ -1,3 +1,8 @@
+# Fetch data from Binance API and display results as a card
+
+This is an example of a React functional component called "App" that uses the useState hook to manage the state of the data returned from an API call. The component makes an API call to the Binance API to fetch 24-hour ticker data for a specific coin symbol, using the axios library to handle the HTTP request. The "getTicker" function is passed as a prop to a child component called "SearchCoin" which triggers the API call when the user clicks the "Search" button. The "App" component then renders a "PriceDetail" component that displays the data returned from the API call, if the data is available. The component also includes a footer that links to the Binance API documentation and is using CSS modules with styles imported from './App.module.css'
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

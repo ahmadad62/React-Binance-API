@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+}
+
+.symbol {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.data {
+}
+
+.statistic {
+    display: flex;
+    justify-content: space-between;
+}

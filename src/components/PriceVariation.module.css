@@ -1,0 +1,20 @@
+.bar {
+    width: 100%;
+    background-color: #f0f2f5;
+    height: 8px;
+    border-radius: 100px;
+}
+
+.fill {
+    background-color: #1c6e73;
+    height: 100%;
+    border-radius: 100px;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 0.2em;
+    color: #484949;
+}

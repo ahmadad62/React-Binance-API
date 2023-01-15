@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import { useState } from "react";
+import PriceDetail from "./components/PriceDetail";
+import SearchCoin from "./components/SearchCoin";
+
+import styles from "./App.module.css";
 
 function App() {
+  const [data, setData] = useState(null);
+
+  const getTicker = (coin) => {
+    axios
+      .get("https://api.binance.com/api/v3/ticker/24hr", {
+        params: {
+          symbol: coin,
+        },
+      })
+      .then((res) => {
+        console.log(res.data)
+        setData(res.data)
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <div className={styles.app}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Fetch Crypto Prices</h1>
+        <SearchCoin getQuote={getTicker} />
+        {data && <PriceDetail data={data} />}
+      </div>
+      <footer className={styles.footer}>
+        Powered by{" "}
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://www.binance.com/en-IN/binance-api"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Binance API
         </a>
-      </header>
+      </footer>
     </div>
   );
 }
